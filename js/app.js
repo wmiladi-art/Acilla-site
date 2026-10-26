@@ -13,25 +13,6 @@
   function money(n) { return n > 0 ? n.toLocaleString('fr-TN', { minimumFractionDigits: 0, maximumFractionDigits: 3 }) + ' DT' : 'Prix sur demande'; }
   function waUrl(text) { return 'https://wa.me/' + shop.whatsapp + '?text=' + encodeURIComponent(text); }
 
-  /* ---------- Thèmes (maquettes A/B/C) ---------- */
-  var HERO = {
-    a: { img: 'img/014-serenite-et-luxe-avec-miss-acilla.webp', title: 'Des coffrets parfum à offrir, des huiles pures à garder pour soi.' },
-    b: { img: 'img/047-rituel-dore-des-huiles-vegetales.webp', title: 'Vingt et une huiles végétales, et des coffrets pour celles et ceux qu’on aime.' },
-    c: { img: 'img/023-coffret-sultan-deodorant-et-parfum.webp', title: 'Le coffret parfum, le cadeau qui ne se trompe jamais.' }
-  };
-  function setTheme(t) {
-    if (!HERO[t]) t = 'a';
-    document.documentElement.setAttribute('data-theme', t);
-    $('[data-hero-img]').src = HERO[t].img;
-    $('[data-hero-title]').textContent = HERO[t].title;
-    $$('[data-set-theme]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setTheme === t)); });
-    store('acilla-theme', t);
-    var u = new URL(location.href); u.searchParams.set('d', t); history.replaceState(null, '', u);
-  }
-  var qp = new URLSearchParams(location.search).get('d');
-  setTheme(qp || store('acilla-theme') || 'a');
-  $$('[data-set-theme]').forEach(function (b) { b.addEventListener('click', function () { setTheme(b.dataset.setTheme); }); });
-
   /* ---------- Infos boutique ---------- */
   $$('[data-shop-name]').forEach(function (e) { e.textContent = shop.nom; });
   $$('[data-shop-sub]').forEach(function (e) { e.textContent = shop.sous_titre; });

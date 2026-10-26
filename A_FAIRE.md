@@ -1,7 +1,7 @@
 # À faire — site Écrin Beauté (revendeur Acilla)
 
 ## Décisions
-- [ ] **Choisir la maquette** A (Rose de Tunis), B (Sidi Bou Saïd) ou C (Nuit de Sultan), puis retirer le sélecteur « Maquette ».
+- [x] Maquette choisie : couleurs rouge vin et rose, photos en arche, accueil trio d'huiles.
 - [ ] **Nom de la boutique** : « Écrin Beauté » est provisoire (modifiable dans `data/catalogue.js`, champ `boutique.nom`).
 - [ ] **Nom de domaine** : aucun pour l'instant. Le site est sur l'adresse `onrender.com`.
 

@@ -1,0 +1,38 @@
+/* Thème final : couleurs « Rose de Tunis » (A) + cadres en arche et accueil « Sidi Bou Saïd » (B). */
+:root {
+  --bg: #FBF1EF; --surface: #FFFFFF; --ink: #3A0F1C; --muted: #8A5A64; --line: #EBCFD0;
+  --accent: #8E1B33; --accent-ink: #FBF1EF; --price: #8E1B33; --gold: #B48A3C;
+  --font-display: 'Bodoni Moda', Didot, serif; --font-body: 'Jost', system-ui, sans-serif;
+  --radius-card: 0; --radius-btn: 2px;
+  --ph-bg: #F4DEDF; --ph-body: #C98592; --ph-cap: #8E1B33; --ph-label: #FBF1EF;
+}
+.brand-name { font-style: italic; font-size: 1.6rem; }
+
+/* Accueil : image en arche à droite, « نحبك برشا » en grand */
+.hero { grid-template-columns: 1fr 1fr; align-items: center; padding: clamp(24px, 4vw, 56px) var(--gutter) 0; gap: clamp(24px, 4vw, 64px); min-height: 0; }
+.hero-media { order: 2; border-radius: 999px 999px 0 0; aspect-ratio: 3 / 4; max-height: 78vh; border: 10px solid var(--surface); box-shadow: 0 0 0 1px var(--gold); background: var(--surface); }
+.hero-text { padding: clamp(24px, 4vw, 48px) 0; }
+.hero-ar { font-size: clamp(3rem, 7vw, 5.6rem); line-height: 1; color: var(--gold); margin-bottom: 18px; }
+.hero-title { font-style: italic; font-size: clamp(2.2rem, 4.4vw, 3.9rem); max-width: 18ch; color: var(--accent); }
+.btn-ghost { border-color: var(--accent); color: var(--accent); }
+
+/* Bandeau conditions */
+.promise { border: 0; margin-top: clamp(24px, 4vw, 48px); background: var(--accent); color: var(--accent-ink); }
+.promise strong { font-family: var(--font-display); font-weight: 400; font-style: italic; font-size: 1.15rem; }
+.promise span { color: #F0CFD4; }
+
+/* Catalogue : photos en arche */
+.card { background: transparent; }
+.card-media { border-radius: 999px 999px 0 0; aspect-ratio: 3 / 4; }
+.card-title { font-style: italic; font-size: 1.2rem; }
+.card-add { border-color: var(--accent); color: var(--accent); }
+.card-add:hover { background: var(--accent); color: var(--accent-ink); }
+.tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.steps li::before { font-style: italic; color: var(--gold); }
+.contact-item { border-radius: 24px 24px 0 0; }
+.pd-main { border-radius: 999px 999px 0 0; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 16px; }
+  .hero-media { order: 0; aspect-ratio: 4 / 4.4; max-height: none; }
+}

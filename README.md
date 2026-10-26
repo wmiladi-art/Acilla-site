@@ -4,7 +4,7 @@ Site statique, sans étape de build : `index.html`, `css/`, `js/app.js`, catalog
 
 - Modifier un prix ou un produit : `data/catalogue.js`.
 - Commande : panier → message WhatsApp pré-rempli vers +216 40 765 356.
-- Maquettes : `?d=a`, `?d=b`, `?d=c` (sélecteur en bas de page, provisoire).
+- Thème : `css/theme.css` (couleurs rouge vin et rose, photos en arche).
 - Déploiement : Render, Static Site, publish path `.`, sans build.
 
 Voir `A_FAIRE.md` pour la liste des points ouverts.
