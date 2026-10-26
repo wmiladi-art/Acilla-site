@@ -39,13 +39,14 @@
   var INTRO = {
     coffrets: 'Un parfum et son soin assorti, dans un écrin prêt à offrir.',
     huiles: 'Flacons de 15 à 200 ml, pour la peau, les cheveux et le massage.',
-    soins: 'Les gammes Rétinol, Anti-acné et Anti-chute. Prix communiqués sur demande.'
+    soins: 'Soins du visage, du corps et des cheveux : nettoyants, crèmes, sérums, masques, solaires et hydrolats.'
   };
-  var state = { cat: 'coffrets', genre: '' };
+  var state = { cat: 'coffrets', genre: '', sc: '' };
   function render() {
-    var list = products.filter(function (p) { return p.categorie === state.cat && (!state.genre || state.cat !== 'coffrets' || p.genre === state.genre || (state.genre !== 'mixte' && p.genre === 'mixte')); });
+    var list = products.filter(function (p) { return p.categorie === state.cat && (!state.genre || state.cat !== 'coffrets' || p.genre === state.genre || (state.genre !== 'mixte' && p.genre === 'mixte')) && (!state.sc || state.cat !== 'soins' || p.sous_cat === state.sc); });
     if (state.cat === 'huiles') list.sort(function (a, b) { return (b.vedette ? 1 : 0) - (a.vedette ? 1 : 0); });
     $('[data-chips]').hidden = state.cat !== 'coffrets';
+    $('[data-chips-soins]').hidden = state.cat !== 'soins';
     $('[data-cat-intro]').textContent = INTRO[state.cat];
     var html = list.map(function (p) {
       var meta = p.contenance || (p.gamme ? 'Gamme ' + p.gamme : (p.contenu || []).join(' + '));
@@ -68,6 +69,13 @@
     render();
   }
   $$('[data-cat]').forEach(function (b) { b.addEventListener('click', function () { setCat(b.dataset.cat); }); });
+  $$('[data-sc]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      state.sc = b.dataset.sc;
+      $$('[data-sc]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      render();
+    });
+  });
   $$('[data-genre]').forEach(function (b) {
     b.addEventListener('click', function () {
       state.genre = b.dataset.genre;

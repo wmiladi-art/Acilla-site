@@ -161,3 +161,10 @@ a.contact-item:hover { border-color: var(--ink); }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 @media (max-width: 760px) { .sheet-cart { width: 100vw; max-width: 100vw; margin: 0; } }
 .pd-ref { color: var(--muted); font-size: .85rem; margin: -10px 0 16px; }
+@media (max-width: 640px) {
+  .chips { flex-wrap: nowrap; overflow-x: auto; margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding: 0 var(--gutter); scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chips button { flex: 0 0 auto; white-space: nowrap; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .tabs button { flex: 0 0 auto; white-space: nowrap; }
+}

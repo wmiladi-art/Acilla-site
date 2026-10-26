@@ -6,21 +6,22 @@
 - [ ] **Nom de domaine** : aucun pour l'instant. Le site est sur l'adresse `onrender.com`.
 
 ## Prix à compléter (affichés « Prix sur demande », valeur 0 DT dans les données)
-- [ ] Gamme Rétinol et Acide Hyaluronique : sérum, eau micellaire, mousse nettoyante, crème de jour, masque (5 articles)
-- [ ] Gamme Anti-acné : sérum, eau micellaire, mousse nettoyante, crème de jour, masque (5 articles)
-- [ ] Gamme Capillaire Anti-chute : shampoing, sérum, masque (3 articles)
+- [ ] Gamme Capillaire Anti-chute : shampoing, sérum, masque (3 articles, absents du fichier acilla.com, sans photo).
 
 ## Prix à confirmer
 - [ ] Coffrets : prix repris de mars 2026 (65 DT, sauf Daily Repair 50 DT et Orientale ancien emballage 50 DT).
 - [ ] Essoltane : 60 DT sur les affiches d'août, 65 DT ensuite. Le site affiche 65 DT.
 - [ ] Coffret Sérums : 65 DT (stock de mars) ou 50 DT (affiches d'octobre) ? Le site affiche 65 DT.
-- [ ] Huiles : prix acilla.com −20 %, arrondis au dinar inférieur (relevé du 26/10/2026). À revoir si acilla.com change ses prix.
+- [ ] Huiles et soins : prix acilla.com −20 %, arrondis au dinar inférieur (relevé du 26/10/2026). À revoir si acilla.com change ses prix.
 - [ ] Plusieurs affiches affichent un prix écrit dans l'image (60/65/50 DT, offre « 2 coffrets à 105 DT »). Vérifier qu'il correspond au prix du site.
 
 ## Contenu
 - [ ] Coffret Miss Acilla : confirmer quelle version correspond à cof15 et à cof16 (parfum + déodorant / parfum + lait corps).
 - [x] Visuels des 20 huiles créés à partir des photos acilla.com (flacon détouré, fond doré, socle, 3 bienfaits).
-- [ ] Photos du Cocktail 5en1 et des 13 articles de soin (un dessin neutre est affiché en attendant).
+- [x] 45 soins de la peau intégrés depuis acilla.com (prix −20 %, références, descriptions) avec 44 visuels au même style que les huiles.
+- [ ] Soin Anti-Cernes (réf. 10029) : la photo d'acilla.com montre un « Soin fortifiant cils », et la référence est la même que le Soin Fortifiant Sourcils. Produit affiché sans photo : vérifier ce qu'il est vraiment.
+- [ ] Corrections faites sur les textes d'acilla.com : Eau Micellaire Anti-Taches (le site affiche le texte de la mousse, texte réécrit), Gel Nettoyant (« Lait » remplacé par « Gel »), Hydrolat d'Oliban (« cicatrisantes » retiré). Mousse et Eau Micellaire Anti-Taches ont la même référence 1010040 sur acilla.com.
+- [ ] Photos du Cocktail 5en1 et de la gamme capillaire (un dessin neutre est affiché en attendant).
 - [ ] Cocktail d'Huiles Précieuses 5en1 : absent du fichier extrait du site. Il manque sa référence et sa description officielle.
 - [x] Descriptions et références des 20 autres huiles reprises du site acilla.com (26/10/2026). Textes retouchés : Cresson et Pépins de Courge (affirmations médicales retirées), Pépin de Raisin et Arachide (« traiter l'acné » adouci), Jojoba (le site acilla.com affiche par erreur le texte du Fenugrec, donc la description d'origine est conservée).
 - [ ] Contenances (ml) des parfums, déodorants et soins, composition (INCI), mode d'emploi.
