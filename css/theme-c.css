@@ -1,0 +1,33 @@
+/* Maquette C — « Nuit de Sultan » : bleu nuit, champagne, Italiana ; grandes photos sur fond sombre. */
+html[data-theme="c"] {
+  --bg: #0F1A31; --surface: #16233F; --ink: #F1E7D0; --muted: #A9B2C6; --line: #2A3A5C;
+  --accent: #D8BC7E; --accent-ink: #0F1A31; --price: #D8BC7E;
+  --font-display: 'Italiana', Didot, serif; --font-body: 'Manrope', system-ui, sans-serif;
+  --radius-card: 6px; --radius-btn: 4px;
+  --ph-bg: #1B2A4A; --ph-body: #34486F; --ph-cap: #D8BC7E; --ph-label: #0F1A31;
+}
+html[data-theme="c"] .brand-name { letter-spacing: .04em; font-size: 1.6rem; }
+html[data-theme="c"] .hero { grid-template-columns: 1fr; position: relative; min-height: min(88vh, 820px); }
+html[data-theme="c"] .hero-media { position: absolute; inset: 0; }
+html[data-theme="c"] .hero-media img { object-position: 70% 50%; }
+html[data-theme="c"] .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #0F1A31 0%, rgba(15, 26, 49, .82) 38%, rgba(15, 26, 49, 0) 72%); }
+html[data-theme="c"] .hero-text { position: relative; z-index: 1; max-width: 760px; }
+html[data-theme="c"] .hero-title { font-size: clamp(2.8rem, 7vw, 6.2rem); line-height: .98; max-width: 12ch; }
+html[data-theme="c"] .hero-ar { color: var(--accent); }
+html[data-theme="c"] .btn-ghost { color: var(--ink); border-color: var(--line); }
+html[data-theme="c"] .promise { background: var(--surface); border-color: var(--line); }
+html[data-theme="c"] .promise strong { color: var(--accent); font-weight: 500; }
+html[data-theme="c"] .section-title { font-size: clamp(2.2rem, 4.4vw, 3.6rem); }
+html[data-theme="c"] .card { background: var(--surface); }
+html[data-theme="c"] .card-body { padding: 14px 14px 6px; }
+html[data-theme="c"] .card-add { margin: 8px 14px 14px; border-color: var(--line); }
+html[data-theme="c"] .card-add:hover { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+html[data-theme="c"] .tabs button[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+html[data-theme="c"] .pd-main { background: #0B1426; }
+html[data-theme="c"] .sheet::backdrop { background: rgba(5, 9, 18, .72); }
+@media (max-width: 860px) {
+  html[data-theme="c"] .hero { min-height: 0; }
+  html[data-theme="c"] .hero-media { position: relative; aspect-ratio: 4 / 3; }
+  html[data-theme="c"] .hero-media::after { background: linear-gradient(0deg, #0F1A31 0%, rgba(15, 26, 49, 0) 55%); }
+  html[data-theme="c"] .hero-text { padding-top: 8px; }
+}

@@ -1,0 +1,23 @@
+/* Maquette A — « Rose de Tunis » : écrin rouge vin et blush, Bodoni, filet doré. */
+html[data-theme="a"] {
+  --bg: #FBF1EF; --surface: #FFFFFF; --ink: #3A0F1C; --muted: #8A5A64; --line: #EBCFD0;
+  --accent: #8E1B33; --accent-ink: #FBF1EF; --price: #8E1B33; --gold: #B48A3C;
+  --font-display: 'Bodoni Moda', Didot, serif; --font-body: 'Jost', system-ui, sans-serif;
+  --radius-card: 2px; --radius-btn: 2px;
+  --ph-bg: #F4DEDF; --ph-body: #C98592; --ph-cap: #8E1B33; --ph-label: #FBF1EF;
+}
+html[data-theme="a"] .brand-name { font-style: italic; font-size: 1.6rem; }
+html[data-theme="a"] .hero { background: var(--accent); color: var(--accent-ink); }
+html[data-theme="a"] .hero-ar { color: #E9C77F; }
+html[data-theme="a"] .hero-title { font-size: clamp(2.4rem, 5.4vw, 5rem); font-style: italic; }
+html[data-theme="a"] .hero-lead { color: #F0CFD4; }
+html[data-theme="a"] .hero .btn-primary { background: var(--accent-ink); color: var(--accent); border-color: var(--accent-ink); }
+html[data-theme="a"] .hero .btn-ghost { color: var(--accent-ink); border-color: #E9C77F; }
+html[data-theme="a"] .hero-media::after { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(233, 199, 127, .7); pointer-events: none; }
+html[data-theme="a"] .promise { background: var(--surface); }
+html[data-theme="a"] .promise strong { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+html[data-theme="a"] .card { background: transparent; }
+html[data-theme="a"] .card-media { outline: 1px solid var(--gold); outline-offset: -8px; }
+html[data-theme="a"] .card-title { font-style: italic; }
+html[data-theme="a"] .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+html[data-theme="a"] .steps li::before { font-style: italic; color: var(--gold); }

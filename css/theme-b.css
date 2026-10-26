@@ -1,0 +1,31 @@
+/* Maquette B — « Sidi Bou Saïd » : murs blanchis, bleu des portes, safran ; cadres en arche. */
+html[data-theme="b"] {
+  --bg: #F7F8F6; --surface: #FFFFFF; --ink: #14294A; --muted: #5B6B82; --line: #D7DFE8;
+  --accent: #1E5AA8; --accent-ink: #FFFFFF; --price: #14294A; --saffron: #E2A33A;
+  --font-display: 'Amiri', Georgia, serif; --font-body: 'Figtree', system-ui, sans-serif;
+  --radius-card: 0; --radius-btn: 999px;
+  --ph-bg: #E6ECF3; --ph-body: #9DB4D2; --ph-cap: #1E5AA8; --ph-label: #F7F8F6;
+}
+html[data-theme="b"] .brand-name { font-weight: 700; color: var(--accent); }
+html[data-theme="b"] .hero { grid-template-columns: 1fr 1fr; align-items: center; padding: clamp(24px, 4vw, 56px) var(--gutter) 0; gap: clamp(24px, 4vw, 64px); min-height: 0; }
+html[data-theme="b"] .hero-media { order: 2; border-radius: 999px 999px 0 0; aspect-ratio: 3 / 4; max-height: 78vh; border: 10px solid var(--surface); box-shadow: 0 0 0 1px var(--line); background: var(--surface); }
+html[data-theme="b"] .hero-text { padding: clamp(24px, 4vw, 48px) 0; }
+html[data-theme="b"] .hero-ar { font-size: clamp(3rem, 7vw, 5.6rem); line-height: 1; color: var(--saffron); margin-bottom: 18px; }
+html[data-theme="b"] .hero-title { font-weight: 700; font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
+html[data-theme="b"] .btn-ghost { border-color: var(--accent); color: var(--accent); }
+html[data-theme="b"] .promise { border: 0; margin-top: clamp(24px, 4vw, 48px); background: var(--accent); color: #fff; }
+html[data-theme="b"] .promise span { color: #CFE0F5; }
+html[data-theme="b"] .section-title { font-weight: 700; }
+html[data-theme="b"] .card { background: transparent; }
+html[data-theme="b"] .card-media { border-radius: 999px 999px 0 0; aspect-ratio: 3 / 4; }
+html[data-theme="b"] .card-title { font-weight: 700; font-size: 1.25rem; }
+html[data-theme="b"] .card-add { border-color: var(--accent); color: var(--accent); }
+html[data-theme="b"] .card-add:hover { background: var(--accent); color: #fff; }
+html[data-theme="b"] .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+html[data-theme="b"] .steps li::before { color: var(--saffron); font-weight: 700; }
+html[data-theme="b"] .contact-item { border-radius: 24px 24px 0 0; }
+html[data-theme="b"] .pd-main { border-radius: 999px 999px 0 0; }
+@media (max-width: 860px) {
+  html[data-theme="b"] .hero { grid-template-columns: 1fr; padding-top: 16px; }
+  html[data-theme="b"] .hero-media { order: 0; aspect-ratio: 4 / 4.4; max-height: none; }
+}
