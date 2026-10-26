@@ -403,7 +403,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Une huile corporelle aux senteurs végétales, idéale pour les soirées d’été."
+   "description": "L'Huile Anti-Moustique Acilla protège la peau grâce à la citronnelle, huile d'amande douce et huile de pépins de raisin. Répulsif naturel et apaisant, elle calme les piqûres et convient à tous les âges.",
+   "reference": "1111013",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/40-huile-anti-moustique-100ml.html",
+   "photo_acilla": "https://www.acilla.com/259-large_default/huile-anti-moustique-100ml.jpg"
   },
   {
    "id": "huile-amandes-douces",
@@ -416,7 +419,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Un grand classique : douce et nourrissante, elle convient à toutes les peaux, même sensibles, et aux pointes sèches."
+   "description": "L'Huile d’Amandes Douces nourrit et adoucit les peaux sèches et sensibles, laissant un touché velours tout en aidant à réduire l'apparence des vergetures.",
+   "reference": "6051001",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/92-huile-d-amandes-douces-30ml.html",
+   "photo_acilla": "https://www.acilla.com/173-large_default/huile-d-amandes-douces-30ml.jpg"
   },
   {
    "id": "huile-noisette",
@@ -429,7 +435,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Légère et vite absorbée, elle est appréciée des peaux mixtes à grasses."
+   "description": "L'Huile de Noisette riche en vitamines A et E, aide à réduire les vergetures et les cicatrices, régule l'excès de sébum et resserre les pores. Convient aux peaux grasses et revitalise les cheveux.",
+   "reference": "6051002",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/93-huile-de-noisette-30ml.html",
+   "photo_acilla": "https://www.acilla.com/174-large_default/huile-de-noisette-30ml.jpg"
   },
   {
    "id": "huile-coco",
@@ -442,7 +451,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Nourrissante et parfumée, pour la peau comme pour les longueurs des cheveux."
+   "description": "L'Huile de Coco nourrit, hydrate et protège la peau et les cheveux. Elle apaise les rougeurs, diminue les vergetures et apporte douceur et brillance aux cheveux secs ou crépus.",
+   "reference": "6051004",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/94-huile-de-coco-30ml.html",
+   "photo_acilla": "https://www.acilla.com/179-large_default/huile-de-coco-30ml.jpg"
   },
   {
    "id": "huile-pepin-raisin",
@@ -455,7 +467,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Fine et non grasse, elle s’utilise seule ou en base de massage."
+   "description": "L'Huile de Pépin de Raisin hydrate, protège et répare la peau et les cheveux. Elle convient aux peaux à imperfections, aide à atténuer cernes et vergetures, et nourrit les cheveux en profondeur.",
+   "reference": "6051005",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/95-huile-de-noisette-30ml.html",
+   "photo_acilla": "https://www.acilla.com/198-large_default/huile-de-noisette-30ml.jpg"
   },
   {
    "id": "huile-figue-barbarie",
@@ -468,7 +483,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Huile rare et précieuse, réputée pour le soin du visage et du contour des yeux."
+   "description": "L'Huile de Pépins de Figues de Barbarie est riche en vitamine E et oméga-6, idéale pour lutter contre les signes du vieillissement, hydrater en profondeur et redonner souplesse et tonicité à votre peau.",
+   "reference": "6051006",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/96-huile-de-pepins-de-figues-de-barbarie-30ml.html",
+   "photo_acilla": "https://www.acilla.com/205-large_default/huile-de-pepins-de-figues-de-barbarie-30ml.jpg"
   },
   {
    "id": "huile-ricin",
@@ -481,7 +499,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "L’alliée traditionnelle des cils, sourcils, ongles et cheveux."
+   "description": "L'Huile de Ricin fortifie les ongles, cheveux et cils. Idéale pour réparer et nourrir les cheveux secs, cassants ou crépus, elle stimule également leur pousse.",
+   "reference": "6051008",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/97-huile-de-ricin-30ml.html",
+   "photo_acilla": "https://www.acilla.com/199-large_default/huile-de-ricin-30ml.jpg"
   },
   {
    "id": "huile-abricot",
@@ -508,8 +529,11 @@ window.CATALOGUE = {
      "alt": "Visuel Acilla : huile-abricot"
     }
    ],
-   "description": "Huile de Noyaux d’Abricot, flacon de 30 ml, présenté pour les soins de la peau et des cheveux.",
-   "vedette": true
+   "description": "L'Huile de Noyaux d’Abricot nourrit et assouplit tous types de peau, lutte contre les signes de l’âge et redonne éclat et douceur. Idéale également pour les cheveux, elle aide à prévenir la chute et à nourrir les longueurs sèches.",
+   "vedette": true,
+   "reference": "6051009",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/98-huile-de-noyaux-dabricot-30ml.html",
+   "photo_acilla": "https://www.acilla.com/202-large_default/huile-de-noyaux-dabricot-30ml.jpg"
   },
   {
    "id": "huile-nigelle",
@@ -540,8 +564,11 @@ window.CATALOGUE = {
      "alt": "Visuel Acilla : huile-nigelle"
     }
    ],
-   "description": "Huile de Nigelle, flacon de 30 ml, présenté pour les soins de la peau et des cheveux.",
-   "vedette": true
+   "description": "L'Huile de Nigelle purifie et apaise les peaux à imperfections, calme les irritations et régénère la peau. Idéale pour les cheveux secs et ternes, elle nourrit le cuir chevelu et prévient les signes de vieillissement cutané.",
+   "vedette": true,
+   "reference": "6051010",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/99-huile-de-nigelle-30ml.html",
+   "photo_acilla": "https://www.acilla.com/184-large_default/huile-de-nigelle-30ml.jpg"
   },
   {
    "id": "huile-cresson",
@@ -554,7 +581,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Utilisée traditionnellement en soin du cuir chevelu et des cheveux."
+   "description": "L'Huile de Cresson fortifie les cheveux, stimule leur pousse et aide à lutter contre leur chute.",
+   "reference": "6051011",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/100-huile-de-cresson-30ml.html",
+   "photo_acilla": "https://www.acilla.com/183-large_default/huile-de-cresson-30ml.jpg"
   },
   {
    "id": "huile-sesame",
@@ -581,8 +611,11 @@ window.CATALOGUE = {
      "alt": "Visuel Acilla : huile-sesame"
     }
    ],
-   "description": "Huile de Sésame, flacon de 30 ml, présenté pour les soins de la peau et des cheveux.",
-   "vedette": true
+   "description": "L'Huile de Sésame apaise les irritations, hydrate les peaux déshydratées, protège l'épiderme et renforce le cuir chevelu tout en limitant la perte de cheveux et l'apparition de pellicules.",
+   "vedette": true,
+   "reference": "6051012",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/101-huile-de-sesame-30ml.html",
+   "photo_acilla": "https://www.acilla.com/201-large_default/huile-de-sesame-30ml.jpg"
   },
   {
    "id": "huile-moutarde",
@@ -595,7 +628,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Huile chauffante utilisée en massage et en soin du cuir chevelu."
+   "description": "L'Huile de Moutarde stimule la pousse des cheveux, lutte contre leur chute, apaise les éruptions cutanées et prévient la sécheresse ainsi que les démangeaisons de la peau.",
+   "reference": "6051013",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/102-huile-de-moutarde-30ml.html",
+   "photo_acilla": "https://www.acilla.com/208-large_default/huile-de-moutarde-30ml.jpg"
   },
   {
    "id": "huile-souchet",
@@ -608,7 +644,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Huile traditionnelle du rituel de beauté oriental, utilisée en soin de la peau."
+   "description": "L'Huile de Souchet nourrit et adoucit la peau, protège contre la déshydratation grâce à sa richesse en vitamine E, et facilite l'épilation tout en retardant la repousse des poils.",
+   "reference": "6051014",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/103-huile-de-souchet-30ml.html",
+   "photo_acilla": "https://www.acilla.com/206-large_default/huile-de-souchet-30ml.jpg"
   },
   {
    "id": "huile-arachide",
@@ -621,7 +660,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Une huile douce et nourrissante pour le corps et le massage."
+   "description": "L'Huile d'Arachide aide à rééquilibrer les peaux à imperfections, lutte contre la peau sèche et les points noirs. Elle fortifie et régénère les cheveux tout en limitant les pellicules.",
+   "reference": "6051015",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/104-huile-d-archide-30ml.html",
+   "photo_acilla": "https://www.acilla.com/177-large_default/huile-d-archide-30ml.jpg"
   },
   {
    "id": "huile-chia",
@@ -634,7 +676,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Riche en oméga-3, elle nourrit les peaux sèches et matures."
+   "description": "L'Huile de Chia convient à tous les types de peau, même les plus sensibles. Grâce à ses propriétés antioxydantes, régénérantes et apaisantes, elle nourrit la peau et les cheveux en profondeur tout en les protégeant des agressions extérieures.",
+   "reference": "6051017",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/105-huile-de-chia-30ml.html",
+   "photo_acilla": "https://www.acilla.com/178-large_default/huile-de-chia-30ml.jpg"
   },
   {
    "id": "huile-noyaux-dattes",
@@ -647,7 +692,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Huile précieuse et rare, pour un soin nourrissant du visage et des cheveux."
+   "description": "L’Huile de Noyaux de Dattes, riche en oméga 6 et 9 et en vitamines A et E, nourrit, hydrate et assouplit la peau sans effet gras. Elle revitalise la peau et stimule efficacement la repousse des cheveux.",
+   "reference": "6051018",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/106-huile-de-noyaux-de-dattes-30ml.html",
+   "photo_acilla": "https://www.acilla.com/207-large_default/huile-de-noyaux-de-dattes-30ml.jpg"
   },
   {
    "id": "huile-amandes-ameres",
@@ -660,7 +708,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Parfum caractéristique et texture fine, pour la peau et les cheveux."
+   "description": "L’huile d’amandes amères est un soin naturel reconnu pour ses propriétés apaisantes et nourrissantes. Elle aide à hydrater la peau, atténuer les taches et les cernes, tout en contribuant à améliorer l’élasticité cutanée. Idéale pour les soins de la peau et des cheveux, elle favorise également la vitalité capillaire et la beauté naturelle au quotidien.",
+   "reference": "6051016",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/115-huile-d-amandes-amere-30ml.html",
+   "photo_acilla": "https://www.acilla.com/176-large_default/huile-d-amandes-amere-30ml.jpg"
   },
   {
    "id": "huile-courge",
@@ -673,7 +724,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Utilisée traditionnellement en soin des cheveux et du cuir chevelu."
+   "description": "L'Huile de Pépins de Courge pressée à froid est riche en acides gras essentiels, zinc et vitamines A et E. Elle nourrit la peau et les cheveux.",
+   "reference": "6051019",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/116-huile-de-pepin-de-pepins-de-courg-30ml.html",
+   "photo_acilla": "https://www.acilla.com/182-large_default/huile-de-pepin-de-pepins-de-courg-30ml.jpg"
   },
   {
    "id": "huile-fenugrec",
@@ -686,7 +740,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Huile traditionnelle du soin capillaire et du soin du corps."
+   "description": "L’Huile de Fenugrec pure est idéale pour raffermir le buste et améliorer l’élasticité de la peau. Elle nourrit également les cheveux, aide à les fortifier et leur apporte volume et brillance naturellement.",
+   "reference": "6051007",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/118-huile-de-fenugrec-30ml.html",
+   "photo_acilla": "https://www.acilla.com/195-large_default/huile-de-fenugrec-30ml.jpg"
   },
   {
    "id": "huile-jojoba",
@@ -699,7 +756,10 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [],
-   "description": "Proche du sébum naturel, elle équilibre les peaux et fait briller les cheveux."
+   "description": "Proche du sébum naturel, elle équilibre les peaux et fait briller les cheveux.",
+   "reference": "6051003",
+   "url_acilla": "https://www.acilla.com/huiles-naturelles/119-huile-de-jojoba-30ml.html",
+   "photo_acilla": "https://www.acilla.com/197-large_default/huile-de-jojoba-30ml.jpg"
   },
   {
    "id": "gamme-retinol-article-01",

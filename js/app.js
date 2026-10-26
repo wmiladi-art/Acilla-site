@@ -102,7 +102,7 @@
       '<div class="pd-grid"><div class="pd-gallery">' + gallery + '</div>' +
       '<div class="pd-info"><h2 id="pd-title">' + esc(p.nom) + '</h2>' +
       '<p class="pd-price' + (p.prix > 0 ? '' : ' is-ask') + '" data-pd-price>' + money(p.variantes.length ? p.variantes[0].prix : p.prix) + '</p>' +
-      '<p class="pd-desc">' + esc(p.description) + '</p>' + variants + contenu + benef + actifs +
+      '<p class="pd-desc">' + esc(p.description) + '</p>' + (p.reference ? '<p class="pd-ref">Réf. ' + esc(p.reference) + '</p>' : '') + variants + contenu + benef + actifs +
       '<div class="pd-buy"><label class="qty">Quantité <input type="number" min="1" max="20" value="1" data-pd-qty></label>' +
       '<button class="btn btn-primary" type="button" data-pd-add>Ajouter au panier</button></div>' +
       '<a class="btn btn-ghost pd-wa" target="_blank" rel="noopener" data-pd-wa href="#">Commander ce produit sur WhatsApp</a>' +
@@ -114,7 +114,7 @@
       $('[data-pd-price]', body).textContent = money(v ? v.prix : p.prix);
       if (v && v.contenu && $('[data-pd-contenu]', body)) $('[data-pd-contenu]', body).innerHTML = v.contenu.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('');
       var q = Math.max(1, +$('[data-pd-qty]', body).value || 1);
-      $('[data-pd-wa]', body).href = waUrl('Bonjour, je souhaite commander :\n- ' + q + ' × ' + p.nom + (v ? ' (' + v.label + ')' : '') + ' — ' + money(v ? v.prix : p.prix) + '\nLivraison : ' + shop.livraison_tnd + ' DT\n\nNom :\nTéléphone :\nAdresse :');
+      $('[data-pd-wa]', body).href = waUrl('Bonjour, je souhaite commander :\n- ' + q + ' × ' + p.nom + (v ? ' (' + v.label + ')' : '') + (p.reference ? ' [réf. ' + p.reference + ']' : '') + ' — ' + money(v ? v.prix : p.prix) + '\nLivraison : ' + shop.livraison_tnd + ' DT\n\nNom :\nTéléphone :\nAdresse :');
     }
     body.addEventListener('change', refresh);
     body.addEventListener('input', refresh);
@@ -136,7 +136,7 @@
   cart = cart.filter(function (l) { return byId[l.id]; });
   function lineInfo(l) {
     var p = byId[l.id]; var v = l.v != null ? p.variantes[l.v] : null;
-    return { p: p, label: p.nom + (v ? ' (' + v.label + ')' : ''), prix: v ? v.prix : p.prix };
+    return { p: p, label: p.nom + (v ? ' (' + v.label + ')' : '') + (p.reference ? ' [réf. ' + p.reference + ']' : ''), prix: v ? v.prix : p.prix };
   }
   function save() { store('acilla-cart', cart); var n = cart.reduce(function (s, l) { return s + l.q; }, 0); $('[data-cart-count]').textContent = n; $('[data-cart-count]').classList.toggle('has', n > 0); }
   function toast(msg) { var t = $('[data-toast]'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove('show'); }, 2200); }

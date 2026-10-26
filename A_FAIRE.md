@@ -19,7 +19,9 @@
 
 ## Contenu
 - [ ] Coffret Miss Acilla : confirmer quelle version correspond à cof15 et à cof16 (parfum + déodorant / parfum + lait corps).
-- [ ] Photos des 18 huiles sans visuel et des 13 articles de soin (un dessin neutre est affiché en attendant).
+- [ ] Photos des 18 huiles sans visuel et des 13 articles de soin (un dessin neutre est affiché en attendant). Les adresses des photos acilla.com sont enregistrées dans `data/catalogue.js` (champ `photo_acilla`). Il reste à les télécharger ou à les lier, avec l'accord d'Acilla de préférence.
+- [ ] Cocktail d'Huiles Précieuses 5en1 : absent du fichier extrait du site. Il manque sa référence et sa description officielle.
+- [x] Descriptions et références des 20 autres huiles reprises du site acilla.com (26/10/2026). Textes retouchés : Cresson et Pépins de Courge (affirmations médicales retirées), Pépin de Raisin et Arachide (« traiter l'acné » adouci), Jojoba (le site acilla.com affiche par erreur le texte du Fenugrec, donc la description d'origine est conservée).
 - [ ] Contenances (ml) des parfums, déodorants et soins, composition (INCI), mode d'emploi.
 - [ ] Contenance réelle de Souchet et Noyaux de Dattes (15 ml dans le titre acilla.com, 30 ml dans l'adresse de la page).
 - [ ] Ajouter de vrais avis clients quand il y en aura. Les témoignages et avant/après générés par IA ont été retirés volontairement.
