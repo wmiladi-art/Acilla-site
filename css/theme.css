@@ -23,7 +23,7 @@
 
 /* Catalogue : photos en arche */
 .card { background: transparent; }
-.card-media { border-radius: 999px 999px 0 0; aspect-ratio: 3 / 4; }
+.card-media { border-radius: 999px 999px 0 0; aspect-ratio: 4 / 5; }
 .card-title { font-style: italic; font-size: 1.2rem; }
 .card-add { border-color: var(--accent); color: var(--accent); }
 .card-add:hover { background: var(--accent); color: var(--accent-ink); }
