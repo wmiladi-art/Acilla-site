@@ -168,3 +168,10 @@ a.contact-item:hover { border-color: var(--ink); }
   .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
   .tabs button { flex: 0 0 auto; white-space: nowrap; }
 }
+/* Partage */
+.pd-share { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+.pd-share-title { font-size: .9rem; font-weight: 600; margin: 0 0 10px; }
+.share-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.share-btns button { background: var(--surface); border: 1px solid var(--line); color: var(--ink); padding: 8px 14px; border-radius: 999px; font-size: .88rem; }
+.share-btns button:hover { border-color: var(--accent); color: var(--accent); }
+.share-btns [data-share="native"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }

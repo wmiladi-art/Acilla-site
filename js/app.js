@@ -114,8 +114,9 @@
       '<div class="pd-buy"><label class="qty">Quantité <input type="number" min="1" max="20" value="1" data-pd-qty></label>' +
       '<button class="btn btn-primary" type="button" data-pd-add>Ajouter au panier</button></div>' +
       '<a class="btn btn-ghost pd-wa" target="_blank" rel="noopener" data-pd-wa href="#">Commander ce produit sur WhatsApp</a>' +
+      shareBlock(p) +
       '</div></div>';
-    var body = $('[data-product-body]');
+    var body = $('[data-product-body]'); var cur = 0;
     function current() { var r = $('input[name=variant]:checked', body); return r ? +r.value : null; }
     function refresh() {
       var vi = current(); var v = vi == null ? null : p.variantes[vi];
@@ -129,14 +130,17 @@
     body.addEventListener('click', function (e) {
       var t = e.target.closest('[data-pd-thumb]');
       if (t) {
-        var im = imgs[+t.dataset.pdThumb];
+        cur = +t.dataset.pdThumb; var im = imgs[cur];
         var main = $('[data-pd-main]', body); main.src = im.src + '.webp'; main.alt = im.alt;
         $$('[data-pd-thumb]', body).forEach(function (b) { b.setAttribute('aria-pressed', String(b === t)); });
       }
+      var sh = e.target.closest('[data-share]');
+      if (sh) { e.preventDefault(); doShare(sh.dataset.share, p, imgs ? imgs[cur] : null); return; }
       if (e.target.closest('[data-pd-add]')) { addToCart(p.id, current(), Math.max(1, +$('[data-pd-qty]', body).value || 1)); pd.close(); }
     });
     refresh();
     pd.showModal();
+    try { history.replaceState(null, '', '#p=' + p.id); } catch (err) {}
   }
 
   /* ---------- Panier ---------- */
@@ -197,6 +201,77 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
   });
 
+  pd.addEventListener('close', function () { try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {} });
+
+  /* ---------- Partage ---------- */
+  var SITE = 'https://acilla-site.onrender.com';
+  var MOBILE = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  function productUrl(p) { return SITE + '/p/' + p.id + '.html'; }
+  function caption(p) {
+    var d = (p.description || '').split('. ')[0];
+    return p.nom + ' — ' + money(p.prix) + (d ? '\n' + d + (d.slice(-1) === '.' ? '' : '.') : '') +
+      '\nCommande sur WhatsApp ' + shop.whatsapp_affiche + ' · Livraison 7 DT partout en Tunisie · Paiement à la livraison\n' + productUrl(p);
+  }
+  function shareBlock(p) {
+    return '<div class="pd-share"><p class="pd-share-title">Partager cette photo</p><div class="share-btns">' +
+      (navigator.share ? '<button type="button" data-share="native">Partager…</button>' : '') +
+      '<button type="button" data-share="facebook">Facebook</button>' +
+      '<button type="button" data-share="messenger">Messenger</button>' +
+      '<button type="button" data-share="instagram">Instagram</button>' +
+      '<button type="button" data-share="tiktok">TikTok</button>' +
+      '<button type="button" data-share="whatsapp">WhatsApp</button>' +
+      '<button type="button" data-share="download">Télécharger la photo</button>' +
+      '<button type="button" data-share="copy">Copier le lien</button>' +
+      '</div></div>';
+  }
+  function photoFile(p, im) {
+    return new Promise(function (resolve, reject) {
+      if (!im) return reject(new Error('pas de photo'));
+      var img = new Image(); img.crossOrigin = 'anonymous';
+      img.onload = function () {
+        var c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight;
+        var g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(img, 0, 0);
+        c.toBlob(function (b) { b ? resolve(new File([b], p.id + '.jpg', { type: 'image/jpeg' })) : reject(new Error('conversion')); }, 'image/jpeg', 0.92);
+      };
+      img.onerror = reject; img.src = im.src + '.webp';
+    });
+  }
+  function download(file) {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(file); a.download = file.name;
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  }
+  function copy(text) { try { return navigator.clipboard.writeText(text); } catch (e) { return Promise.reject(e); } }
+  function open(url) { window.open(url, '_blank', 'noopener'); }
+  function doShare(kind, p, im) {
+    var url = productUrl(p), text = caption(p);
+    if (kind === 'facebook') return open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url));
+    if (kind === 'messenger') return MOBILE ? (location.href = 'fb-messenger://share/?link=' + encodeURIComponent(url)) : open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url));
+    if (kind === 'whatsapp') return open('https://wa.me/?text=' + encodeURIComponent(text));
+    if (kind === 'copy') return copy(url).then(function () { toast('Lien copié'); }, function () { toast(url); });
+    photoFile(p, im).then(function (file) {
+      if (kind === 'download') { download(file); return toast('Photo téléchargée'); }
+      var canFiles = navigator.canShare && navigator.canShare({ files: [file] });
+      if (kind === 'native' || ((kind === 'instagram' || kind === 'tiktok') && canFiles)) {
+        var data = canFiles ? { files: [file], text: text } : { title: p.nom, text: text, url: url };
+        return navigator.share(data).catch(function () {});
+      }
+      // Instagram / TikTok sur ordinateur : photo téléchargée + légende copiée
+      download(file);
+      copy(text).then(function () {}, function () {});
+      toast('Photo téléchargée et légende copiée : publiez-la depuis ' + (kind === 'tiktok' ? 'TikTok' : 'Instagram'));
+    }).catch(function () {
+      if (navigator.share) navigator.share({ title: p.nom, text: text, url: url }).catch(function () {});
+      else copy(url).then(function () { toast('Lien copié'); });
+    });
+  }
+
+  /* ---------- Lien direct vers un produit (#p=identifiant) ---------- */
+  function openFromHash() {
+    var m = /^#p=([\w-]+)/.exec(location.hash); if (!m || !byId[m[1]]) return;
+    var p = byId[m[1]]; setCat(p.categorie); openProduct(p.id);
+  }
+
   save();
   render();
+  openFromHash();
 })();
