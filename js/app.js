@@ -19,6 +19,7 @@
   $('[data-wa-link]').href = waUrl('Bonjour, je souhaite des informations sur vos produits Acilla.');
   $('[data-wa-display]').textContent = shop.whatsapp_affiche;
   $('[data-fb-link]').href = shop.facebook;
+  $('[data-wa-float]').href = waUrl('Bonjour, je souhaite des informations sur vos produits Acilla.');
 
   /* ---------- Visuels de remplacement ---------- */
   function placeholder(p) {
@@ -130,7 +131,7 @@
     body.addEventListener('click', function (e) {
       var t = e.target.closest('[data-pd-thumb]');
       if (t) {
-        cur = +t.dataset.pdThumb; var im = imgs[cur];
+        cur = +t.dataset.pdThumb; var im = imgs[cur]; prepareShare(p, im);
         var main = $('[data-pd-main]', body); main.src = im.src + '.webp'; main.alt = im.alt;
         $$('[data-pd-thumb]', body).forEach(function (b) { b.setAttribute('aria-pressed', String(b === t)); });
       }
@@ -139,6 +140,7 @@
       if (e.target.closest('[data-pd-add]')) { addToCart(p.id, current(), Math.max(1, +$('[data-pd-qty]', body).value || 1)); pd.close(); }
     });
     refresh();
+    prepareShare(p, imgs ? imgs[0] : null);
     pd.showModal();
     try { history.replaceState(null, '', '#p=' + p.id); } catch (err) {}
   }
@@ -151,7 +153,7 @@
     return { p: p, label: p.nom + (v ? ' (' + v.label + ')' : '') + (p.reference ? ' [réf. ' + p.reference + ']' : ''), prix: v ? v.prix : p.prix };
   }
   function save() { store('acilla-cart', cart); var n = cart.reduce(function (s, l) { return s + l.q; }, 0); $('[data-cart-count]').textContent = n; $('[data-cart-count]').classList.toggle('has', n > 0); }
-  function toast(msg) { var t = $('[data-toast]'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove('show'); }, 2200); }
+  function toast(msg, ms) { var t = $('[data-toast]'); var host = document.querySelector('dialog[open]') || document.body; if (t.parentNode !== host) host.appendChild(t); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove('show'); }, ms || 3200); }
   function addToCart(id, v, q) {
     var ex = cart.filter(function (l) { return l.id === id && l.v === v; })[0];
     if (ex) ex.q += q; else cart.push({ id: id, v: v, q: q });
@@ -242,27 +244,53 @@
   }
   function copy(text) { try { return navigator.clipboard.writeText(text); } catch (e) { return Promise.reject(e); } }
   function open(url) { window.open(url, '_blank', 'noopener'); }
+  var shareCache = { key: null, file: null, promise: null };
+  function prepareShare(p, im) {
+    var key = im ? im.src : null;
+    if (shareCache.key === key) return;
+    shareCache = { key: key, file: null, promise: null };
+    if (!im) return;
+    var c = shareCache;
+    c.promise = photoFile(p, im).then(function (f) { c.file = f; return f; }, function () { return null; });
+  }
+  var APPS = { instagram: { name: 'Instagram', web: 'https://www.instagram.com/' }, tiktok: { name: 'TikTok', web: 'https://www.tiktok.com/upload' } };
   function doShare(kind, p, im) {
     var url = productUrl(p), text = caption(p);
     if (kind === 'facebook') return open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url));
     if (kind === 'messenger') return MOBILE ? (location.href = 'fb-messenger://share/?link=' + encodeURIComponent(url)) : open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url));
     if (kind === 'whatsapp') return open('https://wa.me/?text=' + encodeURIComponent(text));
     if (kind === 'copy') return copy(url).then(function () { toast('Lien copié'); }, function () { toast(url); });
-    photoFile(p, im).then(function (file) {
-      if (kind === 'download') { download(file); return toast('Photo téléchargée'); }
-      var canFiles = navigator.canShare && navigator.canShare({ files: [file] });
-      if (kind === 'native' || ((kind === 'instagram' || kind === 'tiktok') && canFiles)) {
-        var data = canFiles ? { files: [file], text: text } : { title: p.nom, text: text, url: url };
-        return navigator.share(data).catch(function () {});
+    var file = shareCache.key === (im && im.src) ? shareCache.file : null;
+    if (kind === 'download') {
+      if (file) { download(file); return toast('Photo téléchargée'); }
+      return photoFile(p, im).then(function (f) { download(f); toast('Photo téléchargée'); }, function () { toast('Photo indisponible'); });
+    }
+    var canFiles = !!(file && navigator.canShare && navigator.canShare({ files: [file] }));
+    if (kind === 'native') {
+      // appel immédiat (dans le geste) : obligatoire sur iPhone
+      var data = canFiles ? { files: [file], title: p.nom, text: text } : { title: p.nom, text: text, url: url };
+      return navigator.share(data).catch(function (e) { if (e && e.name !== 'AbortError') toast('Partage annulé'); });
+    }
+    if (APPS[kind]) {
+      var app = APPS[kind];
+      copy(text).then(function () {}, function () {});   // légende prête à coller
+      if (canFiles) {
+        return navigator.share({ files: [file] }).then(function () {
+          toast('Légende copiée : collez-la dans ' + app.name);
+        }, function (e) {
+          if (e && e.name === 'AbortError') return;
+          download(file); toast('Photo enregistrée et légende copiée : ouvrez ' + app.name + ' pour publier');
+        });
       }
-      // Instagram / TikTok sur ordinateur : photo téléchargée + légende copiée
-      download(file);
-      copy(text).then(function () {}, function () {});
-      toast('Photo téléchargée et légende copiée : publiez-la depuis ' + (kind === 'tiktok' ? 'TikTok' : 'Instagram'));
-    }).catch(function () {
-      if (navigator.share) navigator.share({ title: p.nom, text: text, url: url }).catch(function () {});
-      else copy(url).then(function () { toast('Lien copié'); });
-    });
+      var go = function (f) {
+        if (f) download(f);
+        toast('Photo enregistrée et légende copiée : publiez-la dans ' + app.name, 5000);
+        if (!MOBILE) open(app.web);
+      };
+      if (file) return go(file);
+      if (!shareCache.promise) prepareShare(p, im);
+      return (shareCache.promise || Promise.resolve(null)).then(go);
+    }
   }
 
   /* ---------- Lien direct vers un produit (#p=identifiant) ---------- */

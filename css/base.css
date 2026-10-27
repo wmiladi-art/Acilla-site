@@ -157,7 +157,7 @@ a.contact-item:hover { border-color: var(--ink); }
 .cf-note { font-size: .85rem; color: var(--muted); margin: 0; }
 .btn-wa { width: 100%; margin-top: 6px; }
 
-.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; z-index: 40; background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: var(--radius-btn); transition: opacity .25s, transform .25s; pointer-events: none; max-width: calc(100vw - 32px); }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; z-index: 40; background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: var(--radius-btn); transition: opacity .25s, transform .25s; pointer-events: none; width: max-content; max-width: min(420px, calc(100vw - 32px)); text-align: center; line-height: 1.35; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 @media (max-width: 760px) { .sheet-cart { width: 100vw; max-width: 100vw; margin: 0; } }
 .pd-ref { color: var(--muted); font-size: .85rem; margin: -10px 0 16px; }
@@ -173,5 +173,5 @@ a.contact-item:hover { border-color: var(--ink); }
 .pd-share-title { font-size: .9rem; font-weight: 600; margin: 0 0 10px; }
 .share-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .share-btns button { background: var(--surface); border: 1px solid var(--line); color: var(--ink); padding: 8px 14px; border-radius: 999px; font-size: .88rem; }
-.share-btns button:hover { border-color: var(--accent); color: var(--accent); }
-.share-btns [data-share="native"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+@media (hover: hover) { .share-btns button:not([data-share="native"]):hover { border-color: var(--accent); color: var(--accent); } }
+.share-btns [data-share="native"], .share-btns [data-share="native"]:hover, .share-btns [data-share="native"]:active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 500; }
