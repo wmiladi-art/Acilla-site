@@ -23,14 +23,14 @@
 
 /* Catalogue : photos en arche */
 .card { background: transparent; }
-.card-media { border-radius: 999px 999px 0 0; aspect-ratio: 4 / 5; }
+.card-media { border-radius: 50% 50% 0 0 / 12% 12% 0 0; aspect-ratio: 4 / 5; }
 .card-title { font-style: italic; font-size: 1.2rem; }
 .card-add { border-color: var(--accent); color: var(--accent); }
 .card-add:hover { background: var(--accent); color: var(--accent-ink); }
 .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .steps li::before { font-style: italic; color: var(--gold); }
 .contact-item { border-radius: 24px 24px 0 0; }
-.pd-main { border-radius: 999px 999px 0 0; }
+.pd-main { border-radius: 50% 50% 0 0 / 12% 12% 0 0; }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding-top: 16px; }

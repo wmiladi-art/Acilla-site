@@ -21,6 +21,9 @@
 - [x] 45 soins de la peau intégrés depuis acilla.com (prix −20 %, références, descriptions) avec 44 visuels au même style que les huiles.
 - [ ] Soin Anti-Cernes (réf. 10029) : la photo d'acilla.com montre un « Soin fortifiant cils », et la référence est la même que le Soin Fortifiant Sourcils. Produit affiché sans photo : vérifier ce qu'il est vraiment.
 - [ ] Corrections faites sur les textes d'acilla.com : Eau Micellaire Anti-Taches (le site affiche le texte de la mousse, texte réécrit), Gel Nettoyant (« Lait » remplacé par « Gel »), Hydrolat d'Oliban (« cicatrisantes » retiré). Mousse et Eau Micellaire Anti-Taches ont la même référence 1010040 sur acilla.com.
+- [x] 118 affiches retravaillées (27/10/2026) placées en première image de 59 produits, les anciens visuels restant dans la fiche.
+- [ ] 18 de ces affiches sont marquées « à confirmer » dans leur livraison : contenances (Dattes, Figue de Barbarie, Souchet, Baume à lèvres 4 g ?, Eau micellaire démaquillante 50 ou 200 ml ?, Lait démaquillant 50 ou 150 ml ?) et mode d'emploi des 3 argiles (pot prêt à l'emploi ou poudre à mélanger ?).
+- [ ] Sans affiche retravaillée : Pépin de Raisin, Pépins de Courge, Gel Nettoyant, Eau Micellaire Anti-Taches, Daily Repair Jour, Soin Anti-Cernes (ils gardent mes visuels).
 - [ ] Photos du Cocktail 5en1 et de la gamme capillaire (un dessin neutre est affiché en attendant).
 - [ ] Cocktail d'Huiles Précieuses 5en1 : absent du fichier extrait du site. Il manque sa référence et sa description officielle.
 - [x] Descriptions et références des 20 autres huiles reprises du site acilla.com (26/10/2026). Textes retouchés : Cresson et Pépins de Courge (affirmations médicales retirées), Pépin de Raisin et Arachide (« traiter l'acné » adouci), Jojoba (le site acilla.com affiche par erreur le texte du Fenugrec, donc la description d'origine est conservée).

@@ -404,6 +404,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-anti-moustique-demo",
+     "alt": "Huile Anti-Moustique Acilla"
+    },
+    {
+     "src": "img/aff-huile-anti-moustique-howto",
+     "alt": "Huile Anti-Moustique Acilla, mode d’emploi"
+    },
+    {
      "src": "img/huile-anti-moustique",
      "alt": "Huile Anti-Moustique Acilla"
     }
@@ -424,6 +432,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-amandes-douces-demo",
+     "alt": "Huile d’Amandes Douces Acilla"
+    },
+    {
+     "src": "img/aff-huile-amandes-douces-benefit",
+     "alt": "Huile d’Amandes Douces Acilla, bienfaits"
+    },
     {
      "src": "img/huile-amandes-douces",
      "alt": "Huile d’Amandes Douces Acilla"
@@ -446,6 +462,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-noisette-demo",
+     "alt": "Huile de Noisette Acilla"
+    },
+    {
+     "src": "img/aff-huile-noisette-benefit",
+     "alt": "Huile de Noisette Acilla, bienfaits"
+    },
+    {
      "src": "img/huile-noisette",
      "alt": "Huile de Noisette Acilla"
     }
@@ -466,6 +490,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-coco-demo",
+     "alt": "Huile de Coco Acilla"
+    },
+    {
+     "src": "img/aff-huile-coco-benefit",
+     "alt": "Huile de Coco Acilla, bienfaits"
+    },
     {
      "src": "img/huile-coco",
      "alt": "Huile de Coco Acilla"
@@ -509,6 +541,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-figue-barbarie-demo",
+     "alt": "Huile de Pépins de Figue de Barbarie Acilla"
+    },
+    {
+     "src": "img/aff-huile-figue-barbarie-ingredients",
+     "alt": "Huile de Pépins de Figue de Barbarie Acilla, ingrédient"
+    },
+    {
      "src": "img/huile-figue-barbarie",
      "alt": "Huile de Pépins de Figue de Barbarie Acilla"
     }
@@ -529,6 +569,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-ricin-demo",
+     "alt": "Huile de Ricin Acilla"
+    },
+    {
+     "src": "img/aff-huile-ricin-benefit",
+     "alt": "Huile de Ricin Acilla, bienfaits"
+    },
     {
      "src": "img/huile-ricin",
      "alt": "Huile de Ricin Acilla"
@@ -555,6 +603,14 @@ window.CATALOGUE = {
     "Nourrit les longueurs sèches et présentée pour aider à prévenir la chute des cheveux."
    ],
    "images": [
+    {
+     "src": "img/aff-huile-abricot-demo",
+     "alt": "Huile de Noyaux d’Abricot Acilla"
+    },
+    {
+     "src": "img/aff-huile-abricot-benefit",
+     "alt": "Huile de Noyaux d’Abricot Acilla, bienfaits"
+    },
     {
      "src": "img/049-huile-dabricot-soin-naturel-elegant",
      "alt": "Huile d’Abricot, Soin Naturel Élégant"
@@ -591,6 +647,14 @@ window.CATALOGUE = {
    ],
    "images": [
     {
+     "src": "img/aff-huile-nigelle-demo",
+     "alt": "Huile de Nigelle Acilla"
+    },
+    {
+     "src": "img/aff-huile-nigelle-ingredients",
+     "alt": "Huile de Nigelle Acilla, ingrédient"
+    },
+    {
      "src": "img/002-huile-de-nigelle-acilla-beaute-naturelle",
      "alt": "Huile de Nigelle Acilla – Beauté Naturelle"
     },
@@ -625,6 +689,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-cresson-demo",
+     "alt": "Huile de Cresson Acilla"
+    },
+    {
+     "src": "img/aff-huile-cresson-benefit",
+     "alt": "Huile de Cresson Acilla, bienfaits"
+    },
+    {
      "src": "img/huile-cresson",
      "alt": "Huile de Cresson Acilla"
     }
@@ -650,6 +722,14 @@ window.CATALOGUE = {
     "Présentée pour limiter la perte des cheveux et les pellicules."
    ],
    "images": [
+    {
+     "src": "img/aff-huile-sesame-demo",
+     "alt": "Huile de Sésame Acilla"
+    },
+    {
+     "src": "img/aff-huile-sesame-benefit",
+     "alt": "Huile de Sésame Acilla, bienfaits"
+    },
     {
      "src": "img/051-affiche-luxueuse-a-lhuile-de-sesame",
      "alt": "Affiche luxueuse à l’huile de sésame"
@@ -681,6 +761,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-moutarde-demo",
+     "alt": "Huile de Moutarde Acilla"
+    },
+    {
+     "src": "img/aff-huile-moutarde-benefit",
+     "alt": "Huile de Moutarde Acilla, bienfaits"
+    },
+    {
      "src": "img/huile-moutarde",
      "alt": "Huile de Moutarde Acilla"
     }
@@ -701,6 +789,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-souchet-demo",
+     "alt": "Huile de Souchet Acilla"
+    },
+    {
+     "src": "img/aff-huile-souchet-benefit",
+     "alt": "Huile de Souchet Acilla, bienfaits"
+    },
     {
      "src": "img/huile-souchet",
      "alt": "Huile de Souchet Acilla"
@@ -723,6 +819,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-arachide-demo",
+     "alt": "Huile d’Arachide Acilla"
+    },
+    {
+     "src": "img/aff-huile-arachide-benefit",
+     "alt": "Huile d’Arachide Acilla, bienfaits"
+    },
+    {
      "src": "img/huile-arachide",
      "alt": "Huile d’Arachide Acilla"
     }
@@ -743,6 +847,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-chia-demo",
+     "alt": "Huile de Chia Acilla"
+    },
+    {
+     "src": "img/aff-huile-chia-ingredients",
+     "alt": "Huile de Chia Acilla, ingrédient"
+    },
     {
      "src": "img/huile-chia",
      "alt": "Huile de Chia Acilla"
@@ -765,6 +877,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-noyaux-dattes-demo",
+     "alt": "Huile de Noyaux de Dattes Acilla"
+    },
+    {
+     "src": "img/aff-huile-noyaux-dattes-benefit",
+     "alt": "Huile de Noyaux de Dattes Acilla, bienfaits"
+    },
+    {
      "src": "img/huile-noyaux-dattes",
      "alt": "Huile de Noyaux de Dattes Acilla"
     }
@@ -785,6 +905,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-amandes-ameres-demo",
+     "alt": "Huile d’Amandes Amères Acilla"
+    },
+    {
+     "src": "img/aff-huile-amandes-ameres-benefit",
+     "alt": "Huile d’Amandes Amères Acilla, bienfaits"
+    },
     {
      "src": "img/huile-amandes-ameres",
      "alt": "Huile d’Amandes Amères Acilla"
@@ -828,6 +956,14 @@ window.CATALOGUE = {
    "benefices": [],
    "images": [
     {
+     "src": "img/aff-huile-fenugrec-demo",
+     "alt": "Huile de Fenugrec Acilla"
+    },
+    {
+     "src": "img/aff-huile-fenugrec-ingredients",
+     "alt": "Huile de Fenugrec Acilla, ingrédient"
+    },
+    {
      "src": "img/huile-fenugrec",
      "alt": "Huile de Fenugrec Acilla"
     }
@@ -848,6 +984,14 @@ window.CATALOGUE = {
    "variantes": [],
    "benefices": [],
    "images": [
+    {
+     "src": "img/aff-huile-jojoba-demo",
+     "alt": "Huile de Jojoba Acilla"
+    },
+    {
+     "src": "img/aff-huile-jojoba-benefit",
+     "alt": "Huile de Jojoba Acilla, bienfaits"
+    },
     {
      "src": "img/huile-jojoba",
      "alt": "Huile de Jojoba Acilla"
@@ -874,6 +1018,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-gamme-retinol-demo",
+     "alt": "Gamme Rétinol et Acide Hyaluronique (5 soins) Acilla"
+    },
+    {
+     "src": "img/aff-soin-gamme-retinol-interest",
+     "alt": "Gamme Rétinol et Acide Hyaluronique (5 soins) Acilla, présentation"
+    },
+    {
      "src": "img/soin-gamme-retinol",
      "alt": "Gamme Rétinol et Acide Hyaluronique (5 soins) Acilla"
     },
@@ -899,6 +1051,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-gamme-salicylique-demo",
+     "alt": "Gamme Acide Salicylique et Acide Hyaluronique (5 soins) Acilla"
+    },
+    {
+     "src": "img/aff-soin-gamme-salicylique-interest",
+     "alt": "Gamme Acide Salicylique et Acide Hyaluronique (5 soins) Acilla, présentation"
+    },
+    {
      "src": "img/soin-gamme-salicylique",
      "alt": "Gamme Acide Salicylique et Acide Hyaluronique (5 soins) Acilla"
     },
@@ -923,6 +1083,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-gamme-vitamine-c-demo",
+     "alt": "Gamme Vitamine C et Acide Hyaluronique (5 soins) Acilla"
+    },
+    {
+     "src": "img/aff-soin-gamme-vitamine-c-interest",
+     "alt": "Gamme Vitamine C et Acide Hyaluronique (5 soins) Acilla, présentation"
+    },
     {
      "src": "img/soin-gamme-vitamine-c",
      "alt": "Gamme Vitamine C et Acide Hyaluronique (5 soins) Acilla"
@@ -974,6 +1142,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-eau-micellaire-demo",
+     "alt": "Eau Micellaire Démaquillante Acilla"
+    },
+    {
+     "src": "img/aff-soin-eau-micellaire-howto",
+     "alt": "Eau Micellaire Démaquillante Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-eau-micellaire",
      "alt": "Eau Micellaire Démaquillante Acilla"
     },
@@ -999,6 +1175,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-lait-demaquillant-demo",
+     "alt": "Lait Démaquillant Douceur Acilla"
+    },
+    {
+     "src": "img/aff-soin-lait-demaquillant-howto",
+     "alt": "Lait Démaquillant Douceur Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-lait-demaquillant",
      "alt": "Lait Démaquillant Douceur Acilla"
     },
@@ -1023,6 +1207,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-eau-micellaire-anti-acne-demo",
+     "alt": "Eau Micellaire Anti-Acné Acilla"
+    },
+    {
+     "src": "img/aff-soin-eau-micellaire-anti-acne-howto",
+     "alt": "Eau Micellaire Anti-Acné Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-eau-micellaire-anti-acne",
      "alt": "Eau Micellaire Anti-Acné Acilla"
@@ -1076,6 +1268,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-eau-micellaire-anti-age-demo",
+     "alt": "Eau Micellaire Anti-Âge au Rétinol Acilla"
+    },
+    {
+     "src": "img/aff-soin-eau-micellaire-anti-age-howto",
+     "alt": "Eau Micellaire Anti-Âge au Rétinol Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-eau-micellaire-anti-age",
      "alt": "Eau Micellaire Anti-Âge au Rétinol Acilla"
     },
@@ -1101,6 +1301,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-mousse-anti-age-demo",
+     "alt": "Mousse Nettoyante Anti-Âge au Rétinol Acilla"
+    },
+    {
+     "src": "img/aff-soin-mousse-anti-age-howto",
+     "alt": "Mousse Nettoyante Anti-Âge au Rétinol Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-mousse-anti-age",
      "alt": "Mousse Nettoyante Anti-Âge au Rétinol Acilla"
@@ -1128,6 +1336,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-mousse-anti-tache-demo",
+     "alt": "Mousse Nettoyante Anti-Taches à la Vitamine C Acilla"
+    },
+    {
+     "src": "img/aff-soin-mousse-anti-tache-howto",
+     "alt": "Mousse Nettoyante Anti-Taches à la Vitamine C Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-mousse-anti-tache",
      "alt": "Mousse Nettoyante Anti-Taches à la Vitamine C Acilla"
     },
@@ -1153,6 +1369,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-mousse-anti-acne-demo",
+     "alt": "Mousse Nettoyante Anti-Acné à l’Acide Salicylique Acilla"
+    },
+    {
+     "src": "img/aff-soin-mousse-anti-acne-howto",
+     "alt": "Mousse Nettoyante Anti-Acné à l’Acide Salicylique Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-mousse-anti-acne",
      "alt": "Mousse Nettoyante Anti-Acné à l’Acide Salicylique Acilla"
@@ -1180,6 +1404,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-creme-purifiante-benefit",
+     "alt": "Crème Purifiante Anti-Acné Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-creme-purifiante-interest",
+     "alt": "Crème Purifiante Anti-Acné Acilla, présentation"
+    },
+    {
      "src": "img/soin-creme-purifiante",
      "alt": "Crème Purifiante Anti-Acné Acilla"
     },
@@ -1204,6 +1436,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-precieuse-anti-taches-benefit",
+     "alt": "Crème Précieuse Anti-Taches Brunes Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-precieuse-anti-taches-interest",
+     "alt": "Crème Précieuse Anti-Taches Brunes Acilla, présentation"
+    },
     {
      "src": "img/soin-precieuse-anti-taches",
      "alt": "Crème Précieuse Anti-Taches Brunes Acilla"
@@ -1230,6 +1470,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-precieuse-anti-rides-demo",
+     "alt": "Crème Précieuse Anti-Rides Acilla"
+    },
+    {
+     "src": "img/aff-soin-precieuse-anti-rides-benefit",
+     "alt": "Crème Précieuse Anti-Rides Acilla, bienfaits"
+    },
+    {
      "src": "img/soin-precieuse-anti-rides",
      "alt": "Crème Précieuse Anti-Rides Acilla"
     },
@@ -1254,6 +1502,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-creme-eclaircissante-benefit",
+     "alt": "Crème Éclaircissante Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-creme-eclaircissante-interest",
+     "alt": "Crème Éclaircissante Acilla, présentation"
+    },
     {
      "src": "img/soin-creme-eclaircissante",
      "alt": "Crème Éclaircissante Acilla"
@@ -1305,6 +1561,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-daily-repair-nuit-benefit",
+     "alt": "Crème Daily Repair Nuit Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-daily-repair-nuit-interest",
+     "alt": "Crème Daily Repair Nuit Acilla, présentation"
+    },
+    {
      "src": "img/soin-daily-repair-nuit",
      "alt": "Crème Daily Repair Nuit Acilla"
     },
@@ -1329,6 +1593,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-gel-apaisant-demo",
+     "alt": "Gel Apaisant aux Extraits Naturels Acilla"
+    },
+    {
+     "src": "img/aff-soin-gel-apaisant-benefit",
+     "alt": "Gel Apaisant aux Extraits Naturels Acilla, bienfaits"
+    },
     {
      "src": "img/soin-gel-apaisant",
      "alt": "Gel Apaisant aux Extraits Naturels Acilla"
@@ -1355,6 +1627,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-serum-precieux-demo",
+     "alt": "Sérum Précieux Trois Soins Acilla"
+    },
+    {
+     "src": "img/aff-soin-serum-precieux-interest",
+     "alt": "Sérum Précieux Trois Soins Acilla, présentation"
+    },
+    {
      "src": "img/soin-serum-precieux",
      "alt": "Sérum Précieux Trois Soins Acilla"
     },
@@ -1379,6 +1659,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-serum-anti-acne-benefit",
+     "alt": "Sérum Anti-Acné à l’Acide Salicylique Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-serum-anti-acne-interest",
+     "alt": "Sérum Anti-Acné à l’Acide Salicylique Acilla, présentation"
+    },
     {
      "src": "img/soin-serum-anti-acne",
      "alt": "Sérum Anti-Acné à l’Acide Salicylique Acilla"
@@ -1406,6 +1694,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-serum-anti-age-benefit",
+     "alt": "Sérum Anti-Âge au Rétinol Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-serum-anti-age-interest",
+     "alt": "Sérum Anti-Âge au Rétinol Acilla, présentation"
+    },
+    {
      "src": "img/soin-serum-anti-age",
      "alt": "Sérum Anti-Âge au Rétinol Acilla"
     },
@@ -1431,6 +1727,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-serum-anti-tache-benefit",
+     "alt": "Sérum Anti-Taches à la Vitamine C Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-serum-anti-tache-interest",
+     "alt": "Sérum Anti-Taches à la Vitamine C Acilla, présentation"
+    },
     {
      "src": "img/soin-serum-anti-tache",
      "alt": "Sérum Anti-Taches à la Vitamine C Acilla"
@@ -1458,6 +1762,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-creme-jour-anti-age-demo",
+     "alt": "Crème de Jour Anti-Âge SPF 50 Acilla"
+    },
+    {
+     "src": "img/aff-soin-creme-jour-anti-age-howto",
+     "alt": "Crème de Jour Anti-Âge SPF 50 Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-creme-jour-anti-age",
      "alt": "Crème de Jour Anti-Âge SPF 50 Acilla"
     },
@@ -1483,6 +1795,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-creme-jour-anti-acne-demo",
+     "alt": "Crème de Jour Anti-Acné SPF 50 Acilla"
+    },
+    {
+     "src": "img/aff-soin-creme-jour-anti-acne-howto",
+     "alt": "Crème de Jour Anti-Acné SPF 50 Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-creme-jour-anti-acne",
      "alt": "Crème de Jour Anti-Acné SPF 50 Acilla"
@@ -1510,6 +1830,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-creme-jour-anti-tache-demo",
+     "alt": "Crème de Jour Anti-Taches SPF 50 Acilla"
+    },
+    {
+     "src": "img/aff-soin-creme-jour-anti-tache-howto",
+     "alt": "Crème de Jour Anti-Taches SPF 50 Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-creme-jour-anti-tache",
      "alt": "Crème de Jour Anti-Taches SPF 50 Acilla"
     },
@@ -1536,6 +1864,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-argile-verte-demo",
+     "alt": "Masque d’Argile Verte Acilla"
+    },
+    {
+     "src": "img/aff-soin-argile-verte-howto",
+     "alt": "Masque d’Argile Verte Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-argile-verte",
      "alt": "Masque d’Argile Verte Acilla"
     },
@@ -1560,6 +1896,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-creme-gommante-demo",
+     "alt": "Crème Gommante Booster d’Éclat Acilla"
+    },
+    {
+     "src": "img/aff-soin-creme-gommante-benefit",
+     "alt": "Crème Gommante Booster d’Éclat Acilla, bienfaits"
+    },
     {
      "src": "img/soin-creme-gommante",
      "alt": "Crème Gommante Booster d’Éclat Acilla"
@@ -1586,6 +1930,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-argile-jaune-demo",
+     "alt": "Masque d’Argile Jaune Acilla"
+    },
+    {
+     "src": "img/aff-soin-argile-jaune-howto",
+     "alt": "Masque d’Argile Jaune Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-argile-jaune",
      "alt": "Masque d’Argile Jaune Acilla"
     },
@@ -1611,6 +1963,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-argile-marron-demo",
+     "alt": "Masque d’Argile Marron (Ghassoul) Acilla"
+    },
+    {
+     "src": "img/aff-soin-argile-marron-howto",
+     "alt": "Masque d’Argile Marron (Ghassoul) Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-argile-marron",
      "alt": "Masque d’Argile Marron (Ghassoul) Acilla"
     },
@@ -1635,6 +1995,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-masque-anti-age-demo",
+     "alt": "Masque Anti-Âge au Rétinol Acilla"
+    },
+    {
+     "src": "img/aff-soin-masque-anti-age-howto",
+     "alt": "Masque Anti-Âge au Rétinol Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-masque-anti-age",
      "alt": "Masque Anti-Âge au Rétinol Acilla"
@@ -1662,6 +2030,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-masque-anti-tache-demo",
+     "alt": "Masque Anti-Taches à la Vitamine C Acilla"
+    },
+    {
+     "src": "img/aff-soin-masque-anti-tache-howto",
+     "alt": "Masque Anti-Taches à la Vitamine C Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-masque-anti-tache",
      "alt": "Masque Anti-Taches à la Vitamine C Acilla"
     },
@@ -1687,6 +2063,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-masque-anti-acne-demo",
+     "alt": "Masque Anti-Acné à l’Acide Salicylique Acilla"
+    },
+    {
+     "src": "img/aff-soin-masque-anti-acne-howto",
+     "alt": "Masque Anti-Acné à l’Acide Salicylique Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-masque-anti-acne",
      "alt": "Masque Anti-Acné à l’Acide Salicylique Acilla"
@@ -1714,6 +2098,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-gommage-doux-demo",
+     "alt": "Gommage Visage Doux Acilla"
+    },
+    {
+     "src": "img/aff-soin-gommage-doux-howto",
+     "alt": "Gommage Visage Doux Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-gommage-doux",
      "alt": "Gommage Visage Doux Acilla"
     },
@@ -1739,6 +2131,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-baume-levres-demo",
+     "alt": "Baume à Lèvres Acilla"
+    },
+    {
+     "src": "img/aff-soin-baume-levres-benefit",
+     "alt": "Baume à Lèvres Acilla, bienfaits"
+    },
+    {
      "src": "img/soin-baume-levres",
      "alt": "Baume à Lèvres Acilla"
     },
@@ -1763,6 +2163,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-sourcils-demo",
+     "alt": "Soin Fortifiant Sourcils Acilla"
+    },
+    {
+     "src": "img/aff-soin-sourcils-howto",
+     "alt": "Soin Fortifiant Sourcils Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-sourcils",
      "alt": "Soin Fortifiant Sourcils Acilla"
@@ -1805,6 +2213,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-regard-precieux-benefit",
+     "alt": "Regard Précieux Anti-Cernes Acilla, bienfaits"
+    },
+    {
+     "src": "img/aff-soin-regard-precieux-interest",
+     "alt": "Regard Précieux Anti-Cernes Acilla, présentation"
+    },
+    {
      "src": "img/soin-regard-precieux",
      "alt": "Regard Précieux Anti-Cernes Acilla"
     },
@@ -1829,6 +2245,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-ecran-invisible-demo",
+     "alt": "Écran Solaire Triple Invisible SPF 50 Acilla"
+    },
+    {
+     "src": "img/aff-soin-ecran-invisible-howto",
+     "alt": "Écran Solaire Triple Invisible SPF 50 Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-ecran-invisible",
      "alt": "Écran Solaire Triple Invisible SPF 50 Acilla"
@@ -1855,6 +2279,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-ecran-teinte-demo",
+     "alt": "Écran Solaire Triple Effet Teinté SPF 50 Acilla"
+    },
+    {
+     "src": "img/aff-soin-ecran-teinte-howto",
+     "alt": "Écran Solaire Triple Effet Teinté SPF 50 Acilla, mode d’emploi"
+    },
+    {
      "src": "img/soin-ecran-teinte",
      "alt": "Écran Solaire Triple Effet Teinté SPF 50 Acilla"
     },
@@ -1879,6 +2311,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-hydrolat-jujubier-demo",
+     "alt": "Hydrolat de Jujubier (Sidr) Acilla"
+    },
+    {
+     "src": "img/aff-soin-hydrolat-jujubier-ingredients",
+     "alt": "Hydrolat de Jujubier (Sidr) Acilla, ingrédient"
+    },
     {
      "src": "img/soin-hydrolat-jujubier",
      "alt": "Hydrolat de Jujubier (Sidr) Acilla"
@@ -1905,6 +2345,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-hydrolat-lavande-demo",
+     "alt": "Hydrolat de Lavande Acilla"
+    },
+    {
+     "src": "img/aff-soin-hydrolat-lavande-ingredients",
+     "alt": "Hydrolat de Lavande Acilla, ingrédient"
+    },
+    {
      "src": "img/soin-hydrolat-lavande",
      "alt": "Hydrolat de Lavande Acilla"
     },
@@ -1929,6 +2377,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-hydrolat-oliban-demo",
+     "alt": "Hydrolat d’Oliban Acilla"
+    },
+    {
+     "src": "img/aff-soin-hydrolat-oliban-ingredients",
+     "alt": "Hydrolat d’Oliban Acilla, ingrédient"
+    },
     {
      "src": "img/soin-hydrolat-oliban",
      "alt": "Hydrolat d’Oliban Acilla"
@@ -1955,6 +2411,14 @@ window.CATALOGUE = {
    "variantes": [],
    "images": [
     {
+     "src": "img/aff-soin-hydrolat-romarin-demo",
+     "alt": "Hydrolat de Romarin Acilla"
+    },
+    {
+     "src": "img/aff-soin-hydrolat-romarin-ingredients",
+     "alt": "Hydrolat de Romarin Acilla, ingrédient"
+    },
+    {
      "src": "img/soin-hydrolat-romarin",
      "alt": "Hydrolat de Romarin Acilla"
     },
@@ -1979,6 +2443,14 @@ window.CATALOGUE = {
    "contenu": [],
    "variantes": [],
    "images": [
+    {
+     "src": "img/aff-soin-gel-dentaire-demo",
+     "alt": "Gel Dentaire Aloe Vera et Charbon Actif Acilla"
+    },
+    {
+     "src": "img/aff-soin-gel-dentaire-howto",
+     "alt": "Gel Dentaire Aloe Vera et Charbon Actif Acilla, mode d’emploi"
+    },
     {
      "src": "img/soin-gel-dentaire",
      "alt": "Gel Dentaire Aloe Vera et Charbon Actif Acilla"
