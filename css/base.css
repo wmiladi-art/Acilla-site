@@ -175,3 +175,4 @@ a.contact-item:hover { border-color: var(--ink); }
 .share-btns button { background: var(--surface); border: 1px solid var(--line); color: var(--ink); padding: 8px 14px; border-radius: 999px; font-size: .88rem; }
 @media (hover: hover) { .share-btns button:not([data-share="native"]):hover { border-color: var(--accent); color: var(--accent); } }
 .share-btns [data-share="native"], .share-btns [data-share="native"]:hover, .share-btns [data-share="native"]:active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 500; }
+.card-add.is-out, .card-add.is-out:hover { border-color: var(--line); color: var(--muted); background: transparent; cursor: default; }

@@ -44,7 +44,7 @@
   };
   var state = { cat: 'coffrets', genre: '', sc: '' };
   function render() {
-    var list = products.filter(function (p) { return p.categorie === state.cat && (!state.genre || state.cat !== 'coffrets' || p.genre === state.genre || (state.genre !== 'mixte' && p.genre === 'mixte')) && (!state.sc || state.cat !== 'soins' || p.sous_cat === state.sc); });
+    var list = products.filter(function (p) { return p.visible !== false && p.categorie === state.cat && (!state.genre || state.cat !== 'coffrets' || p.genre === state.genre || (state.genre !== 'mixte' && p.genre === 'mixte')) && (!state.sc || state.cat !== 'soins' || p.sous_cat === state.sc); });
     if (state.cat === 'huiles') list.sort(function (a, b) { return (b.vedette ? 1 : 0) - (a.vedette ? 1 : 0); });
     $('[data-chips]').hidden = state.cat !== 'coffrets';
     $('[data-chips-soins]').hidden = state.cat !== 'soins';
@@ -59,7 +59,7 @@
           (meta ? '<p class="card-meta">' + esc(meta) + '</p>' : '') +
           '<p class="card-price' + (p.prix > 0 ? '' : ' is-ask') + '">' + (p.variantes.length > 1 && new Set(p.variantes.map(function (v) { return v.prix; })).size > 1 ? 'dès ' : '') + money(p.prix) + '</p>' +
         '</div>' +
-        '<button class="card-add" type="button" data-quick="' + esc(p.id) + '">' + (p.variantes.length ? 'Choisir' : 'Ajouter') + '</button>' +
+        (p.stock === 0 ? '<button class="card-add is-out" type="button" disabled>Épuisé</button>' : '<button class="card-add" type="button" data-quick="' + esc(p.id) + '">' + (p.variantes.length ? 'Choisir' : 'Ajouter') + '</button>') +
       '</article>';
     }).join('');
     $('[data-grid]').innerHTML = html || '<p class="empty">Aucun produit dans cette sélection. Essayez « Tous ».</p>';
@@ -113,7 +113,8 @@
       '<p class="pd-price' + (p.prix > 0 ? '' : ' is-ask') + '" data-pd-price>' + money(p.variantes.length ? p.variantes[0].prix : p.prix) + '</p>' +
       '<p class="pd-desc">' + esc(p.description) + '</p>' + (p.reference ? '<p class="pd-ref">Réf. ' + esc(p.reference) + '</p>' : '') + variants + contenu + benef + actifs +
       '<div class="pd-buy"><label class="qty">Quantité <input type="number" min="1" max="20" value="1" data-pd-qty></label>' +
-      '<button class="btn btn-primary" type="button" data-pd-add>Ajouter au panier</button></div>' +
+      (p.stock === 0 ? '<button class="btn btn-primary" type="button" disabled>Épuisé</button></div>' : '<button class="btn btn-primary" type="button" data-pd-add>Ajouter au panier</button></div>') +
+      (p.stock > 0 && p.stock <= 3 ? '<p class="pd-ref" style="margin:8px 0 0;color:var(--accent)">Plus que ' + p.stock + ' en stock</p>' : '') +
       '<a class="btn btn-ghost pd-wa" target="_blank" rel="noopener" data-pd-wa href="#">Commander ce produit sur WhatsApp</a>' +
       shareBlock(p) +
       '</div></div>';
@@ -155,6 +156,11 @@
   function save() { store('acilla-cart', cart); var n = cart.reduce(function (s, l) { return s + l.q; }, 0); $('[data-cart-count]').textContent = n; $('[data-cart-count]').classList.toggle('has', n > 0); }
   function toast(msg, ms) { var t = $('[data-toast]'); var host = document.querySelector('dialog[open]') || document.body; if (t.parentNode !== host) host.appendChild(t); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove('show'); }, ms || 3200); }
   function addToCart(id, v, q) {
+    var st = byId[id].stock;
+    if (st != null) {
+      var dejà = cart.filter(function (l) { return l.id === id; }).reduce(function (s, l) { return s + l.q; }, 0);
+      if (dejà + q > st) { toast(st === 0 ? 'Ce produit est épuisé' : 'Plus que ' + st + ' en stock pour ce produit'); return; }
+    }
     var ex = cart.filter(function (l) { return l.id === id && l.v === v; })[0];
     if (ex) ex.q += q; else cart.push({ id: id, v: v, q: q });
     save(); toast(byId[id].nom + ' ajouté au panier');
@@ -182,7 +188,7 @@
   $('[data-cart-body]').addEventListener('click', function (e) {
     var d = e.target.closest('[data-dec]'), u = e.target.closest('[data-inc]');
     if (d) { var i = +d.dataset.dec; cart[i].q -= 1; if (cart[i].q <= 0) cart.splice(i, 1); }
-    else if (u) { cart[+u.dataset.inc].q += 1; } else return;
+    else if (u) { var l = cart[+u.dataset.inc], st = byId[l.id].stock, tot = cart.filter(function (x) { return x.id === l.id; }).reduce(function (s, x) { return s + x.q; }, 0); if (st != null && tot + 1 > st) { toast('Plus que ' + st + ' en stock'); return; } l.q += 1; } else return;
     save(); renderCart();
   });
   $('[data-cart-body]').addEventListener('submit', function (e) {
@@ -193,7 +199,18 @@
       '\n\nSous-total : ' + money(sub) + (ask ? ' (+ prix à confirmer)' : '') +
       '\nLivraison : ' + shop.livraison_tnd + ' DT\nTotal : ' + money(sub + shop.livraison_tnd) + (ask ? ' (+ prix à confirmer)' : '') +
       '\n\nNom : ' + (f.get('nom') || '') + '\nTéléphone : ' + (f.get('tel') || '') + '\nAdresse : ' + (f.get('adresse') || '');
-    window.open(waUrl(msg), '_blank', 'noopener');
+    var btn = e.target.querySelector('button[type=submit]'); btn.disabled = true; btn.textContent = 'Envoi…';
+    var win = null; try { win = window.open('', '_blank'); } catch (err) {}   // ouvert dans le geste, sinon bloqué
+    var go = function (text) { var u = waUrl(text); if (win && !win.closed) win.location.href = u; else location.href = u; };
+    enregistrerCommande(f).then(function (r) {
+      if (r && r.numero) {
+        go('Commande n° ' + r.numero + '\n' + msg);
+        cart = []; save(); cd.close(); toast('Commande ' + r.numero + ' enregistrée, merci !', 5000);
+      } else go(msg);
+    }).catch(function (err) {
+      if (err && err.bloquant) { if (win) win.close(); toast(err.message, 5000); }
+      else go(msg);
+    }).then(function () { btn.disabled = false; btn.textContent = 'Envoyer ma commande sur WhatsApp'; });
   });
   var cd = $('[data-cart-dialog]');
   $('[data-open-cart]').addEventListener('click', function () { renderCart(); cd.showModal(); });
@@ -293,6 +310,37 @@
     }
   }
 
+
+  /* ---------- Boutique en direct (API Neon) ---------- */
+  var API = 'https://br-raspy-moon-b95u9uk2-boutique.compute.c-7.eu-central-1.aws.neon.tech';
+  function withTimeout(promise, ms) { return Promise.race([promise, new Promise(function (_, rej) { setTimeout(function () { rej(new Error('délai')); }, ms); })]); }
+  function chargerCatalogue() {
+    return withTimeout(fetch(API + '/api/catalogue').then(function (r) { if (!r.ok) throw new Error('catalogue'); return r.json(); }), 6000).then(function (d) {
+      if (d.livraison_tnd != null) shop.livraison_tnd = d.livraison_tnd;
+      d.produits.forEach(function (x) {
+        var p = byId[x.id]; if (!p) return;
+        p.prix = x.prix; p.stock = x.stock; p.visible = x.visible;
+        if (x.nom) p.nom = x.nom;
+        if (x.description) p.description = x.description;
+        if (x.contenance !== undefined) p.contenance = x.contenance;
+        if (x.variantes && x.variantes.length && p.variantes.length === x.variantes.length) {
+          p.variantes = p.variantes.map(function (v, i) { return Object.assign({}, v, { label: x.variantes[i].label, prix: x.variantes[i].prix }); });
+        }
+      });
+      cart = cart.filter(function (l) { return byId[l.id] && byId[l.id].visible !== false; }); save();
+      render();
+    }).catch(function () { /* hors ligne : on garde le catalogue intégré */ });
+  }
+  function enregistrerCommande(f) {
+    var body = { lignes: cart.map(function (l) { return { id: l.id, v: l.v, q: l.q }; }), client: { nom: f.get('nom') || '', tel: f.get('tel') || '', adresse: f.get('adresse') || '' } };
+    return withTimeout(fetch(API + '/api/commandes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }), 8000)
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) {
+        if (r.status === 409 || r.status === 400) { var e = new Error(j.erreur || 'Commande impossible'); e.bloquant = true; chargerCatalogue(); throw e; }
+        if (!r.ok) throw new Error(j.erreur || 'serveur');
+        return j;
+      }); });
+  }
+
   /* ---------- Lien direct vers un produit (#p=identifiant) ---------- */
   function openFromHash() {
     var m = /^#p=([\w-]+)/.exec(location.hash); if (!m || !byId[m[1]]) return;
@@ -302,4 +350,5 @@
   save();
   render();
   openFromHash();
+  chargerCatalogue();
 })();

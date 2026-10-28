@@ -30,6 +30,7 @@
 - [ ] Ajouter de vrais avis clients quand il y en aura. Les témoignages et avant/après générés par IA ont été retirés volontairement.
 
 ## Technique
-- [ ] **Base de données (commandes, stocks)** : mise de côté pour l'instant. Le compte Supabase gratuit actuel a déjà 2 projets actifs (limite de l'offre gratuite).
-  Options : (1) nouveau compte Supabase dédié à Acilla, (2) alternative gratuite sans changer de compte : Neon (Postgres), Firebase, PocketBase sur Render, ou Postgres gratuit de Render (expire après 30 jours sur l'offre gratuite).
-- [ ] Le panier est enregistré dans le navigateur du client et la commande part sur WhatsApp. Il n'y a aucun suivi des commandes côté boutique pour l'instant.
+- [x] **Base de données et tableau de bord** (28/10/2026) : base Neon `ecrin-beaute` + API (Neon Function) + tableau de bord sur `/admin`. Commandes enregistrées, prix/stock/visibilité modifiables en direct.
+- [ ] Changer le mot de passe du tableau de bord après la première connexion (Réglages).
+- [x] Chaque commande est enregistrée (numéro EBaammjj-0001) avant d'ouvrir WhatsApp ; suivi des statuts dans le tableau de bord.
+- [ ] Photos et descriptions restent dans `data/catalogue.js` (modifiables par moi) ; seuls nom, description courte, prix, stock et visibilité sont modifiables depuis le tableau de bord.
