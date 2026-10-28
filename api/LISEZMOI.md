@@ -1,6 +1,6 @@
 # API de la boutique (Neon Function « boutique »)
 
-- Projet Neon : `ecrin-beaute` (ancient-king-21922582), région eu-central-1, branche `main` (br-raspy-moon-b95u9uk2).
+- Projet Neon : `acilla` (ancient-king-21922582, compte walid.miladi@isi.utm.tn), région eu-central-1, branche `main` (br-raspy-moon-b95u9uk2).
 - URL : https://br-raspy-moon-b95u9uk2-boutique.compute.c-7.eu-central-1.aws.neon.tech
 - Aucune dépendance : SQL via l'endpoint HTTP de Neon, jetons HMAC-SHA256, mots de passe scrypt.
 - Tables : `produits` (prix, stock, visibilité, variantes), `commandes`, `reglages` (mot de passe admin chiffré, clé de session, livraison, compteur).

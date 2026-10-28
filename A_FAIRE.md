@@ -30,7 +30,7 @@
 - [ ] Ajouter de vrais avis clients quand il y en aura. Les témoignages et avant/après générés par IA ont été retirés volontairement.
 
 ## Technique
-- [x] **Base de données et tableau de bord** (28/10/2026) : base Neon `ecrin-beaute` + API (Neon Function) + tableau de bord sur `/admin`. Commandes enregistrées, prix/stock/visibilité modifiables en direct.
+- [x] **Base de données et tableau de bord** (28/10/2026) : base Neon `acilla` + API (Neon Function) + tableau de bord sur `/admin`. Commandes enregistrées, prix/stock/visibilité modifiables en direct.
 - [ ] Changer le mot de passe du tableau de bord après la première connexion (Réglages).
 - [x] Chaque commande est enregistrée (numéro EBaammjj-0001) avant d'ouvrir WhatsApp ; suivi des statuts dans le tableau de bord.
 - [ ] Photos et descriptions restent dans `data/catalogue.js` (modifiables par moi) ; seuls nom, description courte, prix, stock et visibilité sont modifiables depuis le tableau de bord.
